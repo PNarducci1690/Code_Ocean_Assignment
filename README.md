@@ -15,4 +15,5 @@ For the following assignment, I was asked to run four queries on a make believe 
   I decided to use snowflake in order to run my queries because it's an industry standard, and a platform that I have been utilizing for some time now. Within the snowflake intance I created a table and then uploaded the CSV in order to fill the table. From there, I built queries in order to answer the questions provided using SQL. The SQL code can be found here, and a writen explanation for those questions can be found in the following readme.md file. Also, images of graphics created in Snowsight can be found here.
     
 # Utilizing Sisense
-  Sisense is a BI platform that allows users to connect to their data wharehouses and, utilizing the data stored there, build KPIs. I decided to utilize Sisense since I felt that this assignment was 
+
+  Sisense is a BI platform that allows users to connect to their data wharehouses and, utilizing the data stored there, build KPIs. I decided to utilize Sisense since I felt that this assignment allowed me to take more of a BI analyst approach to solving the problem. I also use Sisense consitently at work, and I wanted to showcase my abilities when it comes to utilizing BI tools.
