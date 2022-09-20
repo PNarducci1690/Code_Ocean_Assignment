@@ -1,2 +1,3 @@
 # Code_Ocean_Assignment
-Take home assignment for Code Ocean
+
+The following repsoitory contains all aspects of the assignment for 
