@@ -1,4 +1,4 @@
-# Code_Ocean_Assignment
+# Take_Home_Assignment - Meaningful User Activity
 
 For the following assignment, I was asked to run four queries on a make believe table called user_data. In order to solve this problem I worked in a series of steps:
   1) Create a CSV containing randomized fake data 
