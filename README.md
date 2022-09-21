@@ -23,16 +23,16 @@ For the following assignment, I was asked to run four queries on a make believe 
 
 ## Questions and results
 
-### 1) Write a query that, given these fields in the table, will present which users are creating
+1) Write a query that, given these fields in the table, will present which users are creating
 capsules across a 1-month span (starting from the current date).
 
-### 2) Write a query that would allow you to see the pattern of computations in the recent 30 days
+2) Write a query that would allow you to see the pattern of computations in the recent 30 days
 (another interesting metric).
 
-### 3) Write a query for, in the last 30 days, which users have done successful runs (completed
+3) Write a query for, in the last 30 days, which users have done successful runs (completed
 computations).
 
-### 4) Write a query that would measure usage across a month for all users in the table. Please
+4) Write a query that would measure usage across a month for all users in the table. Please
 only include users that have done at least 5 computations or 10 views in the last month (an
 example of how we choose to measure stickiness, determining the fraction of users within a
 customer that are regularly active on the platform).
