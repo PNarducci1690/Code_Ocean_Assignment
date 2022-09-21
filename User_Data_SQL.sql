@@ -86,14 +86,6 @@ only include users that have done at least 5 computations or 10 views in the las
 example of how we choose to measure stickiness, determining the fraction of users within a
 customer that are regularly active on the platform).*/
 
-select
-user_email
-,event_name
-,count(*) as event_count
-from "DEMO_DB"."PUBLIC"."USER_DATA" 
-where event_name != 'create' and time_stamp between '2021-05-13' and '2021-06-12'
-group by user_email, event_name
-
 select 
 *
 from 
