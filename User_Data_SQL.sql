@@ -25,7 +25,7 @@ capsules across a 1-month span (starting from the current date) */
 select
 distinct user_email
 from "DEMO_DB"."PUBLIC"."USER_DATA"
-where event_type = 'capsule' and time_stamp between '2021-05-13' and '2021-06-12'
+where event_type = 'capsule' and time_stamp between '2021-05-13' and dateadd(day, 30, '2021-05-13')
 order by user_email
 
 /* In order to determine what users are creating capsules over a month (30 day) time span, I chose to create this list by selecting 
@@ -42,7 +42,7 @@ count of 31*/
 select
 count(distinct user_email) as total_users
 from "DEMO_DB"."PUBLIC"."USER_DATA"
-where event_type = 'capsule' and time_stamp between '2021-05-13' and '2021-06-12'
+where event_type = 'capsule' and time_stamp between '2021-05-13' and dateadd(day, 30, '2021-05-13')
 
 /* 2) Write a query that would allow you to see the pattern of computations in the recent 30 days (another interesting metric) */
 
@@ -51,7 +51,7 @@ user_email
 ,event_name
 ,time_stamp
 from "DEMO_DB"."PUBLIC"."USER_DATA"
-where event_name = 'computation' and time_stamp between '2021-05-13' and '2021-06-12'
+where event_name = 'computation' and time_stamp between '2021-05-13' and dateadd(day, 30, '2021-05-13')
 order by time_stamp
 
 /* The code above selects the user_email, event_name, and time_stamp columns, so that an output is created that shows what users created 
@@ -68,7 +68,7 @@ computations). */
 select
 distinct user_email
 from "DEMO_DB"."PUBLIC"."USER_DATA"
-where (event_name = 'computation' and event_status = 'completed') and time_stamp between '2021-05-13' and '2021-06-12'
+where (event_name = 'computation' and event_status = 'completed') and time_stamp between '2021-05-13' and dateadd(day, 30, '2021-05-13')
 
 /* In order to solve this question, I needed to look at the distinct users over the selected 30 day time period. By using a where clause
 I am able to select events that are only considered completed computations. The output provides me with a unique list of user names that were
@@ -95,7 +95,7 @@ from
     ,event_name
     ,count(*) as event_count
     from "DEMO_DB"."PUBLIC"."USER_DATA" 
-    where event_name != 'create' and time_stamp between '2021-05-13' and '2021-06-12'
+    where event_name != 'create' and time_stamp between '2021-05-13' and dateadd(day, 30, '2021-05-13')
     group by user_email, event_name
 ) 
 where (event_name = 'view' and event_count >= 10) or (event_name = 'computation' and event_count >= 5)
