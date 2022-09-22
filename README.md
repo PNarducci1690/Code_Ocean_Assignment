@@ -46,12 +46,22 @@ If this was a real world scenario, I may be concerned as to why only 31 users, o
 
 ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_2_1.png)
 
-For this question, I wrote a query that selects on user_email, event_name, and time_stamp. Utilizing the where clause, the query selects on where event_name is categorized as a computation among the selected date timeframe. I then proceeded to order by time_stamp in order to show a linear output from the first date selected in the query up until the last date in the query. However, I took this step a bit further and created a chart out of the output in Snoqsight in order to better visualize my findings.
+For this question, I wrote a query that selects on user_email, event_name, and time_stamp. Utilizing the where clause, the query selects on where event_name is categorized as a computation among the selected date timeframe. I then proceeded to order by time_stamp in order to show a linear output from the first date selected in the query up until the last date in the query. However, I took this step a bit further and created a chart out of the output in Snowsight in order to better visualize my findings.
 
 ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_2_Graph.png)
 
+As can be seen, there is cause for concern. Only 25 computation events were performed during this 30 day period. I also notcied that as this particular 30 day time period progresses, less and less computation events are performed until a total of 6 are performed from early to mid June. This may imply that the tool itself may be too difficult for the users to use, as was suggested in the previous question.
+
 3) Write a query for, in the last 30 days, which users have done successful runs (completed
 computations).
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_3_1.png)
+
+This query utilizes a distinct select on user_email. A where clause is then utilized to select only the values from event_name that are considered computations and the values from event_status that are considered completed. Finally, the where clause selects on the desired date range.
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_3_Results.png)
+
+The output from the query is a result containing the unique users that have ran computations that are considered complete. Again, like the previouse questions, more concerns arise. As we saw in results from question 2, the amount of events considered as computations were slowly decreasing and becoming less aparent. The results here show that things may be even worse, since only seven out of fifty users were able to produce a computation that was considered completed. This continues to support my assumption that maybe the tool itself is too complicated for users to utilize efficiently.
 
 4) Write a query that would measure usage across a month for all users in the table. Please
 only include users that have done at least 5 computations or 10 views in the last month (an
