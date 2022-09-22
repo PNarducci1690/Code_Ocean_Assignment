@@ -82,3 +82,5 @@ That's right! The Query produces no results. Because of the downward trend, not 
   As a bonus, I wanted to demonstrate my familiarity  with utilizing a BI tool in order to create KPIs. The following dashboard was created using Sisense.
   ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Sisense_BI_Dashboard.png)
 
+## Closing
+  Thank you for giving the opportunity to demonstrate my abilities with this assignment. I hope it meets your expectations, and that I will continue to be considered for the position. 
