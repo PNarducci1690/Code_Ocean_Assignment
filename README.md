@@ -19,13 +19,24 @@ In order to solve this problem I worked in a series of steps:
     
 ### Utilizing Sisense
 
-  Sisense is a BI platform that allows users to connect to their data wharehouses and, utilizing the data stored there, build KPIs. I decided to utilize Sisense since I felt that this assignment allowed me to take more of a BI analyst approach to solving the problem. I also use Sisense consitently at work, and I wanted to showcase my abilities when it comes to utilizing BI tools.
+  Sisense is a BI platform that allows users to connect to their data wharehouses and, utilizing the data stored there, build KPIs. I decided to utilize Sisense since I felt that this assignment required more of a BI Analyst approach. I also use Sisense consitently at work, and I wanted to showcase my abilities when it comes to utilizing BI tools.
 
 
 ## Questions and results
 
 1) Write a query that, given these fields in the table, will present which users are creating
 capsules across a 1-month span (starting from the current date).
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_1_1.png)
+
+The SQL query above provides an output of the distinct user's that have been creating capsules over the designated 30
+day period. The query above selects each distinct user from within the user_email column and then, utilizing the where
+clause, the query selects which of those distinct users built capsules over the selected 30 day period. Finally, the order by 
+keyword sorts the results in ascending order (ASC is not required since rder by sorts the results in ascending order by default)
+
+The query returns an output of 31 unique user e-mails (with e-mail being a representation of the user)
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_1_Results2.png)
 
 2) Write a query that would allow you to see the pattern of computations in the recent 30 days
 (another interesting metric).
