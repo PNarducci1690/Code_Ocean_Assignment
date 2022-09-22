@@ -80,6 +80,5 @@ That's right! The Query produces no results. Because of the downward trend, not 
 
 ## Utilizing Sisense
   As a bonus, I wanted to demonstrate my familiarity  with utilizing a BI tool in order to create KPIs. The following dashboard was created using Sisense.
-  
-  ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/BI_Dashboard.png)
+  ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Sisense_BI_Dashboard.png)
 
