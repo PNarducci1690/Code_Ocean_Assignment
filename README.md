@@ -11,7 +11,7 @@ In order to solve this problem I worked in a series of steps:
   
   ### Creating the CSV file
   
-  The CSV file was created using Microsoft Excel. I utilized the five expected columns (user_email. event_type, time_stamp, event_name, event_status), while also incoprporating a primary key that I called event_id. I created this primary key in order to provide the table with a column that contained completely unique values (I think it's important for tables to have this indetifier as to avoid any complications with future querying tasks or when it comes to utilizing BI Tools like Sisense). Every column within the CSV contained randomly generated values over a 1000 rows. 
+  The CSV file was created using Microsoft Excel. I utilized the five expected columns (user_email. event_type, time_stamp, event_name, event_status), while also incoprporating a primary key that I called event_id. I created this primary key in order to provide the table with a column that contained completely unique values (I think it's important for tables to have this indetifier as to avoid any complications with future querying tasks or when it comes to utilizing BI Tools like Sisense). Every column within the CSV contained randomly generated values over a 1000 rows. The date range in the data goes from January 1st, 2021 up until December 31st, 2021.
   
   ### Utilizing Snowflake
     
@@ -67,3 +67,16 @@ The output from the query is a result containing the unique users that have ran 
 only include users that have done at least 5 computations or 10 views in the last month (an
 example of how we choose to measure stickiness, determining the fraction of users within a
 customer that are regularly active on the platform).
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_4_1.png)
+
+For the final query, a subquery was needed in order to produce the final results. The inner query selects on user_email, user_name, and produces an allias column called event_count which is produced using the count() function. The inner query then utilizes a where clause in order to select all events over the designated timeline that are not create events. Finally, the query is then grouped by user_email and event_name, thus allowing us to collapse the event_count into the required fields. If you were to run the inner query by itself, the output would be a listing of user emails, followed by the event type, followed by the total amount of times that the event occured.
+
+The outter query is needed because it allows me to utilize the alias I created. Its purpose is to select value totals upon the specified events and within the specified value range as stated in the question. This is done by utilizing the where clause and utilizing a group by. The following outcome is produced:
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_4_Result_1.png)
+
+That's right! The Query produces no results. Because of the downward trend, not enough users produced enough views or computations that fall in between the range (Which continues to amplify the concern). But, in order to show that the code works, I produced a range that fits this particular 30 day period. 
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_4_Result_What_If.png)
+
+##Utilizing Sisense
+
