@@ -32,14 +32,23 @@ capsules across a 1-month span (starting from the current date).
 The SQL query above provides an output of the distinct user's that have been creating capsules over the designated 30
 day period. The query above selects each distinct user from within the user_email column and then, utilizing the where
 clause, the query selects which of those distinct users built capsules over the selected 30 day period. Finally, the order by 
-keyword sorts the results in ascending order (ASC is not required since rder by sorts the results in ascending order by default)
+keyword sorts the results in ascending order (ASC is not required since rder by sorts the results in ascending order by default).
 
-The query returns an output of 31 unique user e-mails (with e-mail being a representation of the user)
+The query returns an output of 31 unique user e-mails (with e-mail being a representation of the user) that have been tied
+to creating capsules from the column ebent_type.
 
 ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_1_Results2.png)
 
+If this was a real world scenario, I may be concerned as to why only 31 users, out of a total of 50, are only utilizing the capsule event. Further analysis Also shows that only a total of 44 capsules have been created by these 31 users. Is it possible that capsule creation is dificult? Is the tool that meeting the needs of the users? etc. But, even though this is randomized data, we can already see points of concern.
+
 2) Write a query that would allow you to see the pattern of computations in the recent 30 days
-(another interesting metric).
+(another interesting metric). 
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_2_1.png)
+
+For this question, I wrote a query that selects on user_email, event_name, and time_stamp. Utilizing the where clause, the query selects on where event_name is categorized as a computation among the selected date timeframe. I then proceeded to order by time_stamp in order to show a linear output from the first date selected in the query up until the last date in the query. However, I took this step a bit further and created a chart out of the output in Snoqsight in order to better visualize my findings.
+
+![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_2_Graph.png)
 
 3) Write a query for, in the last 30 days, which users have done successful runs (completed
 computations).
