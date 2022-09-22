@@ -78,5 +78,8 @@ The outter query is needed because it allows me to utilize the alias I created. 
 That's right! The Query produces no results. Because of the downward trend, not enough users produced enough views or computations that fall in between the range (Which continues to amplify the concern). But, in order to show that the code works, I produced a range that fits this particular 30 day period. 
 ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/Quest_4_Result_What_If.png)
 
-##Utilizing Sisense
+## Utilizing Sisense
+  As a bonus, I wanted to demonstrate my familiarity  with utilizing a BI tool in order to create KPIs. The following dashboard was created using Sisense.
+  
+  ![](https://github.com/PNarducci1690/Take_Home_Assignment/blob/main/Assignment_Images/BI_Dashboard.png)
 
